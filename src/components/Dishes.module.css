@@ -1,0 +1,9 @@
+.meals {
+
+    margin-top: 5em;
+    margin-bottom: 10em;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-gap: 5em;
+}

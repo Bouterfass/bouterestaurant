@@ -1,0 +1,42 @@
+.image {
+    background: url(../images/lasagne.jpg) no-repeat 
+    center 
+    center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 20em;
+    height: 140px;
+    position: relative;
+    left: -3em;
+    top: -2.5em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 7px;
+    transition: 1s;
+}
+
+.meal-name {
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: .5em;
+    text-indent: 5%;
+    color: rgb(53, 53, 53);
+}
+
+.meal-description {
+    text-indent: 5%;
+    font-size: 1.05em;
+    line-height: 1.1em;
+}
+
+.meal-price{
+    position: relative;
+    font-size: 1.8em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

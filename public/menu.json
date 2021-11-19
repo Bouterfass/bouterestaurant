@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Pizza",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/pizza.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Lasagne",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/lasagne.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Hamburger",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/hamburger.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Couscous",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/couscous.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Pâtes bolognaise",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/bolognaise.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Poulet curry",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/curry.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "Sushi",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/sushi.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Tajine kefta",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/tajinekefta.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Chips Pringles",
+        "price": 10,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ligula dictum, iaculis magna a, hendrerit mi.",
+        "url": "../images/pringles.jpg"
+    }
+]

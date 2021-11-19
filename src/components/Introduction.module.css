@@ -1,0 +1,122 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-image {
+    position: absolute;
+    z-index: -100;
+    height: 100vh;
+    width: 100%;
+    background:     url(../images/food_intro.jpg) 
+                    no-repeat 
+                    center 
+                    center 
+                    fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.container-text {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.block-blur {
+    position: absolute;
+    width: 50%;
+    height: 30vh;
+    padding-top: 2em;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+}
+
+.block {
+    background: linear-gradient(to right bottom, rgba(252, 252, 252, 0.808), rgb(255, 255, 255, 0.7));
+    border: 5px rgb(255, 255, 255) solid;
+    border-radius: 7px;
+    position: relative;
+    width: 50%;
+    height: 30vh;
+    padding-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+}
+
+.text {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.paragraph {
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 75%;
+}
+
+.decouvrir {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bolder;
+    color: black;
+    border: 2px black solid;
+    background-color: transparent;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 0.8em;
+    padding-left: 0.8em;
+    border-radius: 7px;
+    letter-spacing: 0.05em;
+    transition: .3s ease-in-out;
+}
+
+
+.decouvrir:hover {
+    color: #cedec5;
+    background-color: black;
+}
+
+@media screen and (max-width: 1024px){
+  
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+    .block {
+        background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.808), rgb(255, 255, 255, 0.7));
+        border: 5px rgb(255, 255, 255) solid;
+        border-radius: 7px;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding-top: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+    }
+}
