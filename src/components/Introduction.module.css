@@ -13,8 +13,7 @@
     background:     url(../images/food_intro.jpg) 
                     no-repeat 
                     center 
-                    center 
-                    fixed; 
+                    center ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

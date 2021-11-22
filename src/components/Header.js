@@ -1,9 +1,14 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import OverlayMenu from "./OverlayMenu";
 import style from './Header.module.css';
+import { connect } from "react-redux";
+import { UPDATE_LOG_ACTION } from "../store/logReducer";
+import { logSelector } from "../store/logSelector";
+import { updateLog } from "../store/logActions";
 
 
-const Header = () => {
+
+export const HeaderComponent = ({ log, changeLog }) => {
 
     const [overlay, SetOverlay] = useState(false);
 
@@ -15,6 +20,22 @@ const Header = () => {
         SetOverlay(x);
     }
 
+    let navItem = (log) => {
+        if (log) {
+            return (
+            <>
+                <a href="#">Votre panier</a>
+                <a href="#" onClick={() => {changeLog()}}>Se déconnecter</a>
+            </>);
+        }
+        else {
+            return (
+                <>
+                    <a href="#" onClick={() => {changeLog()}}>Se connecter</a>
+                </>);
+        }
+    }
+ 
     return(
         <>
             <header className={style.header}>
@@ -24,8 +45,7 @@ const Header = () => {
                     </div>
                     <div className={style.links}>
                         <a href="#">Menu</a>
-                        <a href="#">Votre panier</a>
-                        <a href="#">Se connecter</a>
+                        {navItem(log)}
                     </div>
                     <div className={style.cross}>
                         <img onClick={menuHandler} src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png"/>
@@ -39,8 +59,11 @@ const Header = () => {
 
 }
 
+export const Header = connect((state) => ({
+        log: logSelector(state.isLogged)
+    }),
+    (dispatch) => ({
+        changeLog: (log) => dispatch(updateLog(log))
+    })
+)(HeaderComponent)
 
-
-
-
-export default Header;

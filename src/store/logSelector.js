@@ -1,0 +1,1 @@
+export const logSelector = (log) => log;
