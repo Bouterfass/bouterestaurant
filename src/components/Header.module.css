@@ -8,6 +8,7 @@
     height: 1rem;
     padding: 3rem;
     top : 0;
+    transition: 0.5s ease-in-out;
 }
 
 .header-scrolled {
@@ -20,7 +21,8 @@
     height: 1rem;
     padding: 3rem;
     top : 0;
-    transition: .8s;
+    transition: .5s ease-in-out;
+    box-shadow: 0 5px 5px rgba(136, 136, 136, 0.486);
 }
 
 .elem {

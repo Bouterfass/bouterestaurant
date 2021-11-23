@@ -14,13 +14,19 @@ export const HeaderComponent = ({ log, over, changeLog, changeOver }) => {
     const [navColor, SetNavColor] = useState(false); 
 
     const changeNavColor = () => {
-        if (window.scrollY > 120)
+        if (window.scrollY > 80)
             SetNavColor(true);
         else
             SetNavColor(false);
     }
 
-    window.addEventListener('scroll', changeNavColor);
+    useEffect(() => {
+        changeNavColor();
+        window.addEventListener('scroll', changeNavColor);
+    }, [])
+        
+
+
     let navItem = (log) => {
         if (log) {
             return (
