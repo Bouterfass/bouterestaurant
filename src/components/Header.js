@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import  {OverlayMenu}  from "./OverlayMenu";
 import style from './Header.module.css';
 import { connect } from "react-redux";
@@ -11,6 +11,16 @@ import { updateOver } from "../store/overlay/overActions";
 
 export const HeaderComponent = ({ log, over, changeLog, changeOver }) => {
 
+    const [navColor, SetNavColor] = useState(false); 
+
+    const changeNavColor = () => {
+        if (window.scrollY > 120)
+            SetNavColor(true);
+        else
+            SetNavColor(false);
+    }
+
+    window.addEventListener('scroll', changeNavColor);
     let navItem = (log) => {
         if (log) {
             return (
@@ -38,7 +48,7 @@ export const HeaderComponent = ({ log, over, changeLog, changeOver }) => {
     else {
         return(
             <>
-                <header className={style.header}>
+                <header className={navColor ? style['header-scrolled'] : style.header}>
                     <div className={style.elem}>
                         <div className={style.brand}>
                             Bouterestaurant

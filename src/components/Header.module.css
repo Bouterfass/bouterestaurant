@@ -5,9 +5,22 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 5%;
+    height: 1rem;
     padding: 3rem;
     top : 0;
+}
+
+.header-scrolled {
+    z-index: 1;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1rem;
+    padding: 3rem;
+    top : 0;
+    transition: .8s;
 }
 
 .elem {
