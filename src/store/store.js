@@ -1,7 +1,13 @@
-import { createStore } from "redux";
-import logReducer from "./logReducer";
+import { createStore, combineReducers } from "redux";
+import logReducer from "./logStorage/logReducer";
+import overReducer from "./overlay/overReducer";
 
-const store = createStore(logReducer);
+const reducer = combineReducers ({
+    logReducer,
+    overReducer
+})
+
+const store = createStore(reducer);
 
 
 export default store;

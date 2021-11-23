@@ -1,46 +1,72 @@
-import {React, useState} from 'react';
+import { React } from 'react';
 import  ReactDOM  from 'react-dom';
 import styles from './OverlayMenu.module.css';
+import { connect } from 'react-redux';
+import { updateLog } from '../store/logStorage/logActions';
+import { logSelector } from '../store/logStorage/logSelector';
+import { useSelector, useDispatch } from 'react-redux';
+import { useCallback } from 'react';
 
+export const OverlayComponent = () => {
 
-const Overlay = props => {
+    const log = useSelector(logSelector);
+    const dispatch = useDispatch();
 
-    const closeHandler = () => {
-        props.sendFalse(false);
-    }
-
-    return (
-        
-        <div className={styles.container}>
-            <div className={styles.cross}>
-                <img onClick={closeHandler} src="https://img.icons8.com/ios-glyphs/30/000000/delete-sign.png"/>
-            </div>
-            <div className={styles.links}>
-                <a href="#">Menu</a>
-                <a href="#">Votre panier</a>
-                <a href="#">Se connecter</a>
-            </div>
-        </div>
-
+    const logHandler = useCallback(
+        () => {
+            dispatch(updateLog())   
+        },
+        [],
     );
 
-}
-        
-const OverlayMenu = props => {
-
-    const sendFalsebis = f =>{
-        props.throwFalse(f);
+    let navLinks = (log) => {
+        if (log) {
+            return (
+                <div className={styles.container}>
+                <div className={styles.links}>
+                <a href="#">Menu</a>
+                <a href="#">Votre panier</a>
+                <a href="#" onClick={() => logHandler()}>Se déconnecter</a>
+                </div>
+            </div>);
+        }
+        else {
+            return (
+                <div className={styles.container}>
+                <div className={styles.links}>
+                    <a href="#">Menu</a>
+                    <a href="#" onClick={() => logHandler()}>Se connecter</a>
+                </div>
+            </div>);
+        }
     }
 
     return (
         <>
+       {navLinks(log)}
+        </>
+    );
+
+}
+        
+export const OverlayMenuComponent = () => {
+
+    return (
+        <>
             {ReactDOM.createPortal(
-                <Overlay sendFalse={sendFalsebis} />, 
+                <OverlayComponent />, 
                 document.getElementById('overlay-menu'))}
         </>
     );
 
 }
 
+export const OverlayMenu = connect(
+    (state) => ({
+        log: logSelector(state)
+    }),
+    (dispatch) => ({
+        changeLog: () => dispatch(updateLog())
+    })
+)(OverlayMenuComponent)
 
-export default OverlayMenu;
